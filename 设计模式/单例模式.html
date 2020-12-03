@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单例模式</title>
+</head>
+<body>
+    <script>
+        const Person = (function () {
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            let instance = null;
+
+            Person.prototype.sayHi = function () {
+                console.log("hello world!");
+            }
+
+            return function singleTon(...args){
+                if (!instance) {
+                    instance = new Person(...args);
+                }
+                return instance
+            }
+        })();
+
+        const p1 = new Person("Jujuxiaer", 18);
+        const p2 = new Person("Jujuxiaer2", 19);
+        console.log(p1, p2);
+        console.log(p1 === p2);
+    </script>
+    
+</body>
+</html>
