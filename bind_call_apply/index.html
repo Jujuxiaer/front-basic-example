@@ -78,6 +78,26 @@
 
         let sayClone2 = obj.say.customBind(obj2, 1, 2, 3);
         sayClone2(4);
+
+
+        // 原生JS实现call函数
+        Function.prototype.customCall = function(objThis, ...params) {
+            if (objThis === null || objThis === undefined) {
+                objThis = window;
+            }
+            // 定义一个不重复的属性
+            const specialMethodName = Symbol('anything');
+            // 将这个不重复的属性作为objThis对象中的一个属性，再将带调用的函数(this中即为带调用的函数)赋值为这个属性
+            objThis[specialMethodName] = this;
+            // 通过objThis对象来调用函数，并返回结果
+            let ret = objThis[specialMethodName](...params);
+            // 最后要将改变后的objThis恢复原样，即删除添加的属性
+            delete objThis[specialMethodName];
+
+            return ret;
+        }
+        obj.say.customCall(obj2, 1, 2, 3, 4, 5);
+
     </script>
 </body>
 </html>
