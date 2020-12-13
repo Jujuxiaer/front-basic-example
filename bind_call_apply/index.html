@@ -56,8 +56,28 @@
         obj.say.apply(obj2, [1, 2, 3]);
 
         let sayClone = obj.say.bind(obj2, 1, 2, 3);
-        sayClone();
+        sayClone(4);
+
+        new sayClone();
         
+        // 原生JS实现bind函数
+        Function.prototype.customBind = function(objThis, ...params) {
+            // 保存当前调用的函数，比如上面例子中的obj.say
+            const thisFunc = this;
+            let funcForBind = function (...secondParams) {  
+                // thisArg为究竟是哪个对象调用执行thisFunc函数
+                // 第一种： 如果是通过new的方式闯将函数对象，比如上面的new sayClone();，此时thisArg指向的就是this
+                // 第二种： 如果是直接调用执行thisFunc，比如上面的sayClone(4)；，此时thisArg指定的就是objThis对象
+                const isNew = this instanceof funcForBind;
+                const thisArg = isNew ? this : objThis;
+                return thisFunc.call(thisArg, ...params, ...secondParams);
+            }
+
+            return funcForBind;
+        }
+
+        let sayClone2 = obj.say.customBind(obj2, 1, 2, 3);
+        sayClone2(4);
     </script>
 </body>
 </html>
