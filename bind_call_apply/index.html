@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>call/apply/bind在日常开发中时常用到，它们的作用都是改变this指向，或者说是借用方法</h3>
+    <pre>
+        func.call(thisArg, param1, param2 ...)
+        func.apply(thisArg, [param1, param2, ...])
+        func.bind(thisArg, param1, param2)
+    </pre>
+
+    <h3>参数</h3>
+    <pre>
+        参数：
+
+        thisArg(可选)：
+        func的this将指向thisArg;
+        非严格模式下若thisArg指定为null或者undefined，则func的this指向window对象；
+        严格模式下若thisArg指定为null或者undefined，则func的this指向undefined;
+
+        param(可选):
+        如果不传该参数或是传入null或者undefined，则表示不传入任何参数；
+        apply的第二个参数为类数组对象，初入func的参数是数组内各项的值；
+    </pre>
+
+    <p>
+        call和apply本质上并没有什么区别，作用都是一致的，它们的差别体现在传入给func的参数不同。
+        call是多次传入要使用的参数，而apply传入的是一个包含要使用参数的类数组。
+    </p>
+
+    <p>
+        call/apply与bind的区别体现在它们的返回值不同，
+        call和apply的返回值是func的执行结果，在改变this指向后立即执行函数，
+        而bind的返回值是func的拷贝，在改变this指向后不会立即执行函数，即需要自行调用得到的这个新函数。
+    </p>
+
+    <script>
+        let obj = {
+            name: "Jujuxiaer",
+            say: function () { 
+                console.log(arguments);
+                console.log(this.name);
+            }
+        }
+        let obj2 = {
+            name: "Juzhihua"
+        }
+        obj.say();
+
+        // call/apply 直接执行函数
+        obj.say.call(obj2, 1, 2, 3);
+        obj.say.apply(obj2, [1, 2, 3]);
+
+        let sayClone = obj.say.bind(obj2, 1, 2, 3);
+        sayClone();
+        
+    </script>
+</body>
+</html>
