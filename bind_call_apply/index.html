@@ -72,7 +72,7 @@
                 const thisArg = isNew ? this : objThis;
                 return thisFunc.call(thisArg, ...params, ...secondParams);
             }
-
+            funcForBind.prototype = Object.create(thisFunc.prototype);
             return funcForBind;
         }
 
