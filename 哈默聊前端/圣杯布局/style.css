@@ -1,0 +1,44 @@
+body{
+    min-width: 500px;
+}
+
+div{
+    text-align: center;
+}
+
+#header{
+    background-color: #f1f1f1;
+}
+
+#content .column{
+    float: left;
+}
+
+#content {
+    padding-left: 300px;
+    padding-right: 200px;
+}
+
+#content #center {
+    background-color: #ddd;
+    width: 100%;
+}
+
+#content #left {
+    position: relative;
+    background-color: orange;
+    width: 300px;
+    margin-left: -100%;
+    right: 300px;
+}
+
+#content #right {
+    background-color: green;
+    width: 200px;
+    margin-right: -200px;
+}
+
+#footer {
+    clear: both;
+    background-color: #f1f1f1;
+}
