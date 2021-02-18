@@ -1,0 +1,25 @@
+#main {
+    background-color: #ddd;
+    width: 100%;
+}
+
+#main #main-wrapper {
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+#left {
+    background-color: orange;
+    width: 100px;
+    margin-left: -100%;
+}
+
+#right {
+    background-color: green;
+    width: 50px;
+    margin-left: -50px;
+}
+
+.column {
+    float: left;
+}
