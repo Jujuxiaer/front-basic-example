@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>嗨~ Pizza</title>
+  </head>
+  <body>
+    <!-- 滚动 -->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="fas fa-chevron-up scrolltop_icon"></i>
+    </a>
+    <!-- =======Header======= -->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <!-- logo -->
+        <a href="#" class="nav_logo">
+          <img src="img/logo.png" alt="Pizza" class="logo" />
+        </a>
+        <!-- 菜单栏 -->
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#home" class="nav_link active_link">主页</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link">关于我们</a>
+            </li>
+            <li class="nav_item">
+              <a href="#services" class="nav_link">提供服务</a>
+            </li>
+            <li class="nav_item">
+              <a href="#menu" class="nav_link">热卖单品</a>
+            </li>
+            <li class="nav_item">
+              <a href="#contact" class="nav_link">联系我们</a>
+            </li>
+            <li>
+              <!-- 切换主题背景色的图标 -->
+              <i class="far fa-moon change-theme" id="theme-button"></i>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 页面缩之后的导航 -->
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =======main======= -->
+    <main class="l-main">
+      <!-- 主页 -->
+      <section class="home" id="home">
+        <div class="home_container bd-container bd-grid">
+          <!-- 左侧文本 -->
+          <div class="home_data">
+            <h1 class="home_title">嗨～ Pizza!</h1>
+            <h2 class="home_subtitle">精选上等食材，只为这一时刻</h2>
+            <a href="#menu" class="button">热卖单品</a>
+          </div>
+
+          <!-- 右侧图片 -->
+          <img src="img/hero-pizza.png" alt="" class="home_img" />
+        </div>
+      </section>
+
+      <!-- 关于我们 -->
+      <section class="about section bd-container" id="about">
+        <div class="about_container bd-grid">
+          <!-- 右侧文本 -->
+          <div class="about_data">
+            <span class="section-subtitle about_initial">关于我们</span>
+            <h2 class="section-title about_initial">悠久的历史</h2>
+            <p class="about_description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+              veritatis vel qui, beatae ipsam adipisci sapiente laboriosam iusto
+              placeat alias cumque accusantium at pariatur veniam aperiam,
+              voluptatibus rem doloribus nemo?
+            </p>
+            <a href="#" class="button">了解更多</a>
+          </div>
+
+          <!-- 左侧图片 -->
+          <img src="img/about.jpg" alt="" class="about_img" />
+        </div>
+      </section>
+
+      <!-- 提供服务 -->
+      <section class="services section bd-container" id="services">
+        <span class="section-subtitle">提供</span>
+        <h2 class="section-title">优质服务</h2>
+
+        <!-- 服务内容  -->
+        <div class="services_container bd-grid">
+          <div class="services_content">
+            <i class="fas fa-utensils fa-4x"></i>
+            <h3 class="services_title">贴心的服务</h3>
+            <p class="services_description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              asperiores aliquam suscipit natus rerum nam unde nesciunt
+              reiciendis odio deleniti.
+            </p>
+          </div>
+
+          <div class="services_content">
+            <i class="fas fa-pizza-slice fa-4x"></i>
+            <h3 class="services_title">美味的食物</h3>
+            <p class="services_description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              asperiores aliquam suscipit natus rerum nam unde nesciunt
+              reiciendis odio deleniti.
+            </p>
+          </div>
+
+          <div class="services_content">
+            <i class="fas fa-truck fa-4x"></i>
+            <h3 class="services_title">快捷的配送</h3>
+            <p class="services_description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              asperiores aliquam suscipit natus rerum nam unde nesciunt
+              reiciendis odio deleniti.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 热卖单品 -->
+      <section class="menu section bd-container" id="menu">
+        <span class="section-subtitle">爆款</span>
+        <h2 class="section-title">产品推荐</h2>
+        <!-- 产品 -->
+        <div class="menu_container bd-grid">
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">猫山王榴莲披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥108.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">夏威夷风情披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥68.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">海鲜风味披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥89.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">芝士培根披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥89.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">热带水果披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥68.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+          <div class="menu_content">
+            <img src="img/pizza.png" alt="" class="menu_img" />
+            <h3 class="menu_name">风味烤肠披萨</h3>
+            <span class="menu_detail">10寸</span>
+            <span class="menu_price">¥68.00</span>
+            <a href="#" class="button menu_button">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======联系我们====== -->
+      <section class="contact section bd-container" id="contact">
+        <div class="contact_container bd-grid">
+          <div class="contact_data">
+            <span class="section-subtitle contact_initial">留言</span>
+            <h2 class="section-title contact_initial">联系我们</h2>
+            <p class="contact_description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              distinctio id facere autem quidem saepe quas laboriosam alias
+              molestiae amet animi nam, qui reprehenderit sequi unde atque
+              dignissimos minus est quae, optio perspiciatis consequatur
+              tempora! Adipisci alias sequi laboriosam illo.
+            </p>
+          </div>
+
+          <div class="contact_button">
+            <a href="#" class="button">立即沟通</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer section bd-container">
+      <div class="footer_container bd-grid">
+        <div class="footer_content">
+          <a href="#" class="footer_logo"> 嗨～Pizza！</a>
+          <span class="footer_description">餐厅</span>
+          <div>
+            <a href="#" class="footer_social footer_link">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="footer_social footer_link">
+              <i class="fab fa-qq"></i>
+            </a>
+            <a href="#" class="footer_social footer_link">
+              <i class="fab fa-weibo"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer_content">
+          <h3 class="footer_title">订购服务</h3>
+          <ul>
+            <li><a href="#" class="footer_link">配送</a></li>
+            <li><a href="#" class="footer_link">价格</a></li>
+            <li><a href="#" class="footer_link">产品</a></li>
+            <li><a href="#" class="footer_link">售后</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_content">
+          <h3 class="footer_title">更多信息</h3>
+          <ul>
+            <li><a href="#" class="footer_link">优惠活动</a></li>
+            <li><a href="#" class="footer_link">联系我们</a></li>
+            <li><a href="#" class="footer_link">品牌发展</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_content">
+          <h3 class="footer_title">联系方式</h3>
+          <ul>
+            <li>地址：成都市人民南路</li>
+            <li>电话：012345678</li>
+            <li>邮箱：hi-pizza@email.com</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer_copy">&copy; 2021 Hi Pizza. All rights reserved</p>
+    </footer>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/s# Won't work
+# start()
+
+
+def start():
+    print('Start')
+    next()
+
+
+# Won't work
+# start()
+
+
+def next():
+    print('Next')
+    last()
+
+
+def last():
+    print('Last')
+
+# Will work
+start()/4.0.9/scrollreveal.min.js"
+      integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/s# Won't work"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
